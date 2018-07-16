@@ -1,0 +1,27 @@
+{
+  "settings": {
+    "PostmarkAPI": "Your-API-key-here",
+    "Contact": {
+      "emailFrom": "Your-email-here",
+      "emailTO"  : "Your-destination-here",
+      "templateID": "Your-templateId-here",
+      "testingEmail" :  "Your-testing-email-here"
+    },
+    "ThankYou": {
+      "emailFrom": "Your-email-here",
+      "templateID": "Your-templateId-here"
+    },
+    "Error": {
+      "emailFrom": "Your-email-here",
+      "templateIDUser": "Your-templateId-here",
+      "templateIDMav" : "Your-templateId-here",
+      "templateIDBadURL" : "Your-templateId-here"
+    },
+    "Captcha": {
+      "privateKey": "Your-Captcha-key"
+    },
+    "WhiteList": {
+      "okRequestURL" : ["A-list-of-your-okayed-urls-as-strings"]
+    },
+  }
+}

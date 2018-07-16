@@ -1,0 +1,34 @@
+<!--NOTE: The following code is intended for developement purposes only-->
+<div class="git-form">
+  {{#if isErrors}}
+	        <div class="errors">
+	    		<ul>
+          			{{#each errors}}
+            			<li>{{this.msg}}</li>
+        			{{/each}}
+        		</ul>
+        	</div>
+        {{/if}}
+       <form action ="/" method="post">
+           <fieldset>
+               <p><label for="fName">First Name:</label></p>
+               <p><input type="text" name="fName" id="fname" required /></p>
+               <p><label for="lName">Last Name:</label></p>
+               <p><input type="text" name="lName" id="lname" required /></p>
+               <p><label for="phoneNum">Phone Number:</label></p>
+               <p><input type="text" name="phoneNum" id="phoneNum" /></p>
+               <p><label for="email">Email:</label></p>
+               <p><input type="text" name="email" id="email" required /></p>
+               <p><label for="message">Message:</label></p>
+               <p><textarea name="message" id="message" maxlength="1000" required></textarea></p>
+               <div class="git-chars">
+                   Characters Remaining:
+                   <span id="remWords">1000</span>
+               </div>
+               <!--<div class="g-recaptcha" data-sitekey="6LdhXRsUAAAAAIiCiQ_2y8SVyx9QKOMRv7y87uM2" data-callback="captchaClick"></div>-->
+               <div class="mavbutton">
+                   <button type="submit">Submit</button>
+               </div>
+           </fieldset>
+       </form>
+   </div>

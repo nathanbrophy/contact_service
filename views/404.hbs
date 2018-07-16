@@ -1,0 +1,28 @@
+{{!< layout}}
+<div>
+    <h1 style='color: Red'>Page not found</h1>
+    <div id="alerttext" style="display:inline-flex;text-align:center;align-content:center;">Redirecting to home page in&nbsp<div id="countdown">10</div>&nbspseconds.</div>
+    <div id="redirlink">Click <a href="/">here</a> if not automatically redirected!</div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#redirlink').hide();
+        decCount();
+    });
+
+    function decCount(){
+    var time = 10;
+        setInterval(function () {
+            if(time > 0){
+            time--;
+            $('#countdown').text(time);
+            if(time < 1){
+                $('#alerttext').hide();
+                $('#redirlink').show();
+                window.location.replace("http://www.mavericksoftware.com");
+            }
+        }
+        }, 1000);
+    }
+</script>
