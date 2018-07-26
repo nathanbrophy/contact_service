@@ -62,6 +62,7 @@ router.post('/', [
         }
       });
     }
+    res.status(200).end()
 });
 
 //helper function for the post method to run the postmark engine and send emails
